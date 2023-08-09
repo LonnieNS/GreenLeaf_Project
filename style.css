@@ -1,0 +1,1209 @@
+/* ================================================================================= GENERELT ================================================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+.centerwebsite {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+/* ---------- TEKST ---------- */
+
+html {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  color: #fe6f20;
+}
+
+h1 {
+  font-size: clamp(3rem, 2.231rem + 3.077vw, 5rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 0.538rem + 3.846vw, 4rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.308rem + 0.769vw, 2rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: clamp(1rem, 0.808rem + 0.769vw, 1.5rem);
+}
+
+a {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ---------- HEADER ---------- */
+
+#parallax-container {
+  display: block;
+  height: 100vh;
+}
+
+#parallax-container div {
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  background-position: center;
+  transform: translateY(0px);
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.headerh1 {
+  padding-top: 15vh;
+  padding-left: 18vw;
+  padding-right: 18vw;
+}
+
+.para1 {
+  background-image: url(media/Mheader1.png);
+}
+.para2 {
+  background-image: url(media/Mheader2.png);
+}
+.para3 {
+  background-image: url(media/Mheader3.png);
+}
+.para4 {
+  background-image: url(media/Mheader4.png);
+}
+.para5 {
+  background-image: url(media/Mheader5.png);
+}
+.para6 {
+  background-image: url(media/Mheader6.png);
+}
+.para7 {
+  background-image: url(media/Mheader7.png);
+}
+.para8 {
+  background-image: url(media/Mheader8.png);
+}
+
+.subpage-header {
+  background-image: url(media/subpageheader.png);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  color: #fff;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.main-nav {
+  display: flex;
+  width: 100vw;
+  max-width: 1440px;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.brand {
+  width: 200px;
+  color: #cec538;
+  position: relative;
+  z-index: 1;
+}
+
+.burger-btn {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #a4ca33;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  transition: 300ms;
+}
+
+.bar:nth-child(1).active {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar:nth-child(2).active {
+  display: none;
+}
+
+.bar:nth-child(3).active {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.nav-ul {
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fe6f20;
+  display: none;
+  place-content: center;
+  list-style-type: none;
+  z-index: 0;
+  text-transform: uppercase;
+}
+
+.nav-ul.show {
+  display: grid;
+  text-align: center;
+}
+
+.nav-item {
+  margin-bottom: 20px;
+}
+
+.stotos {
+  background-color: #a4ca33;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 5vh;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: clamp(1.563rem, 1.164rem + 1.634vw, 3.125rem);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #a4ca33;
+}
+
+.nav-link::before {
+  content: url(media/leaficon.png);
+
+  position: absolute;
+  left: -30px;
+  top: -5px;
+  transition: 300ms;
+  opacity: 0;
+}
+
+.nav-link:hover::before {
+  transform: translateX(-30px);
+  color: #cec538;
+  opacity: 1;
+}
+
+.stot-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: clamp(1.563rem, 1.164rem + 1.634vw, 3.125rem);
+  position: relative;
+}
+
+.stot-link:hover {
+  color: #fe6f20;
+}
+
+/* ---------- NYHEDSBREV ---------- */
+
+.nyhedsbrev {
+  background-color: #a4ca33;
+  position: relative;
+  color: #fff;
+  padding-top: 2vh;
+  text-align: center;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.nyhedsbrev input {
+  width: 95%;
+  margin: 10px;
+  padding: 15px;
+  border: none;
+  color: #a4ca33;
+  text-transform: uppercase;
+}
+
+.nyhedsbrev input[type="submit"] {
+  background-color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  color: #a4ca33;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 2vh;
+}
+/* ---------- FOOTER ---------- */
+
+footer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
+  position: relative;
+  background-color: #fe6f20;
+  color: #fff;
+}
+
+.footersec-1 {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.footersec-2 {
+  padding-top: 5vh;
+  text-align: center;
+}
+
+.footersec-2 input {
+  width: 95%;
+  margin: 10px;
+  padding: 15px;
+  border: none;
+  color: #fe6f20;
+  text-transform: uppercase;
+}
+
+.footersec-2 textarea {
+  width: 95%;
+  margin: 10px;
+  resize: none;
+  border: none;
+  color: #fe6f20;
+  text-transform: uppercase;
+}
+
+.footersec-2 input[type="submit"] {
+  background-color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  color: #fe6f20;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.footersec-3 {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+/* ---------- TILBAGEVENDENDE ELEMENTER ---------- */
+
+.transp-box {
+  background-color: #ffffff8d;
+  margin: 10px;
+  margin-top: 5vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ================================================================================= GENERELT slut ================================================================================= */
+
+/* ================================================================================= HJEM ================================================================================= */
+
+/* ---------- HEADER ---------- */
+
+.p1-header {
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+/* ---------- MAIN ----------- */
+
+.main {
+  width: 100vw;
+  max-width: 1440px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* ---------- GENERELT FOR SECTIONS ---------- */
+
+.p1-section {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
+  padding-top: 5vh;
+}
+
+.p1-section-text {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+/* ---------- SECTION 1 ---------- */
+
+.p1-section-1-imgdiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.p1-section-1-img {
+  width: 95vw;
+}
+
+/* --------- SECTION 2 ----------  */
+
+.p1-section-2 {
+  background-image: url(media/msectionbackground1.png);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+}
+
+.p1-section-2-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* --------- SECTION 3 ----------  */
+
+.p1-section-3-imgdiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.p1-section-3-img {
+  width: 95%;
+}
+
+.p1-section-3-btn {
+  width: 40%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #a4ca33;
+  color: #fff;
+}
+
+.p1-section-3-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.p1-section-3-btn a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ================================================================================= PROJEKTER ================================================================================= */
+
+.p2-header {
+  padding-top: 15vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.p2-main {
+  padding-top: 5vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+/* --------- GALLERI ---------- */
+
+.p2-section-gallery {
+  padding-top: 5vh;
+}
+
+.p2-section-gallery h2 {
+  margin-bottom: 5vh;
+}
+
+.img-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(30, 5vw);
+  grid-gap: 5px;
+}
+
+.img-item {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.img-item-2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.img-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 11;
+}
+
+.img-item-4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 11;
+}
+
+.img-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 16;
+}
+
+.img-item-6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 11;
+  grid-row-end: 16;
+}
+
+.img-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 16;
+  grid-row-end: 21;
+}
+
+.img-item-8 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 16;
+  grid-row-end: 21;
+}
+
+.img-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 21;
+  grid-row-end: 26;
+}
+
+.img-item-10 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 21;
+  grid-row-end: 26;
+}
+
+.img-item-11 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 26;
+  grid-row-end: 31;
+}
+
+.img-item-12 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 26;
+  grid-row-end: 31;
+}
+
+/* ----- HOVER ----- */
+
+.galleri-img {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.galleri-img img {
+  transition: 0.3s ease-in-out;
+}
+
+.galleri-img img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ---------- SECTION 1 ---------- */
+
+.p2-section-1 {
+  padding-top: 10vh;
+  height: 100vh;
+  background-image: url(media/msectionbackground1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.p2-section-1-a {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 5vh;
+}
+
+.p2-section-1-a h3 {
+  margin-bottom: 3vh;
+}
+
+.p2-section-1-b {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 3vh;
+}
+
+.p2-section-1-b h3 {
+  margin-bottom: 3vh;
+}
+
+/* ---------- KORT ---------- */
+
+.p2-section-2 {
+  padding-top: 5vh;
+  height: 100vh;
+}
+
+.p2-kort-container {
+  display: flex;
+  justify-content: center;
+}
+
+.kort {
+  margin-top: 10vh;
+  width: 90%;
+  height: 70vh;
+}
+
+/* ================================================================================= OM OS  ================================================================================= */
+
+.p3-header {
+  padding-top: 15vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.p3-main {
+  padding-top: 5vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+/* ---------- FOLKENE BAG --------- */
+
+.p3-sec2-fb {
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+.p3-sec2-img {
+  width: 40vw;
+  min-width: 150px;
+  border-radius: 5px;
+}
+
+.p3-om {
+  padding: 5vw;
+  min-width: 150px;
+}
+
+.p3-om p {
+  margin-top: 2vh;
+}
+
+/* ---------- PROJEKTETS FREMTID ---------- */
+
+.p3-section-3 {
+  padding: 5vw;
+  height: 100vh;
+  background-image: url(media/msectionbackground1.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.p3-section-3 h2 {
+  margin-bottom: 2vh;
+}
+
+/* ---------- ÅRSRAPPORT OG ØKONOMI  ---------- */
+
+.p3-section-4 {
+  height: 76vh;
+  padding: 5vw;
+}
+
+.p3-section-4 h2 {
+  margin: 2vh;
+}
+
+.p3-knapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2vh;
+}
+
+.p3-knap {
+  padding: 5vw;
+  width: 80vw;
+  border-radius: 50px;
+  background-color: #a4ca33;
+  text-align: center;
+  margin: 20px;
+}
+.p3-knap {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ================================================================================= PARTNERE ================================================================================= */
+
+.p4-header {
+  padding-top: 15vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.p4-main {
+  padding-top: 5vh;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.p4-section-1 {
+  height: 100vh;
+  padding: 5vw;
+}
+.p4-sec-1-img {
+  width: 100%;
+}
+
+.p4-section-1-div p {
+  margin-top: 10vh;
+}
+
+/* -------- NUVÆRENDE PARTNERE ---------- */
+
+.p4-section-3 {
+  color: #fff;
+  padding: 5vh;
+  background-image: url(media/msectionbackground1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo-container {
+  margin-top: 5vh;
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 5vw);
+  grid-gap: 5px;
+}
+
+.p4-partnerlogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.logo-item-2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.logo-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+.logo-item-4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+.logo-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+
+.logo-item-6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+
+/* ---------- Nye partnere ---------- */
+
+.p4-section-2 {
+  padding: 5vw;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.p4-section-2 p {
+  font-weight: 600;
+  padding-right: 30px;
+}
+
+.kalendericon {
+  width: 80px;
+}
+
+/* ================================================================================= STØT OS ================================================================================= */
+.stotmain {
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+  padding-top: 10vh;
+}
+
+.stotmain h2 {
+  margin-bottom: 3vh;
+}
+
+.stotmain p {
+  margin-bottom: 1vh;
+}
+
+.stotosheader {
+  color: #a4ca33;
+}
+
+.stotmain input {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-color: #fe6f20;
+  border-style: solid;
+  border-width: 2px;
+  color: #fe6f20;
+  text-transform: uppercase;
+}
+
+.stotmain input[type="submit"] {
+  background-color: #fe6f20;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. RESPONSIVE -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */
+
+/* ------- Specifikt for header ------- */
+@media screen and (min-width: 500px) {
+  /* ---------- HEADER ---------- */
+  .para1 {
+    background-image: url(media/Header1.png);
+  }
+  .para2 {
+    background-image: url(media/Header2.png);
+  }
+  .para3 {
+    background-image: url(media/Header3.png);
+  }
+  .para4 {
+    background-image: url(media/Header4.png);
+  }
+  .para5 {
+    background-image: url(media/Header5.png);
+  }
+  .para6 {
+    background-image: url(media/Header6.png);
+  }
+  .para7 {
+    background-image: url(media/Header7.png);
+  }
+  .para8 {
+    background-image: url(media/Header8.png);
+  }
+}
+
+/* ---------- SECTIONS ---------- */
+
+/* --------- Section 2 ---------- */
+
+.p1-section-2 {
+  background-image: url(media/sectionbackground1.png);
+}
+
+/* ---------- Desktop ---------- */
+
+@media screen and (min-width: 900px) {
+  /* ================================================================================= DESKTOP GENERELT ================================================================================= */
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    height: 60vh;
+    display: flex;
+    align-content: space-between;
+  }
+
+  .footersec-1 {
+    width: 35vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .footersec-2 {
+    width: 35vw;
+  }
+
+  .footersec-3 {
+    width: 30vw;
+  }
+
+  /* ================================================================================= GENERELT slut ================================================================================= */
+
+  /* ================================================================================= DESKTOP HJEM ================================================================================= */
+
+  /* ---------- Generelt for sektion ---------- */
+
+  .transp-box {
+    background-color: #ffffff8d;
+    margin: 30px;
+    padding: 30px;
+    padding-bottom: 60px;
+  }
+
+  .p1-section-content {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+  }
+
+  /* ---------- Sektion 1 ---------- */
+
+  .p1-section-1-img {
+    width: 45vw;
+  }
+
+  .p1-section-1-text {
+    width: 45vw;
+  }
+
+  /* ---------- Sektion 2 ---------- */
+  .p1-section-2-text {
+    margin-top: 30px;
+  }
+
+  /* ---------- Sektion 3 ---------- */
+
+  .p1-section-3-img {
+    width: 45vw;
+  }
+
+  /* ================================================================================= DESKTOP PROJEKTER ================================================================================= */
+
+  /* ---------- GALLERI ---------- */
+
+  .img-container {
+    padding: 20px;
+    grid-gap: 10px;
+  }
+
+  .img-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .img-item-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .img-item-3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 11;
+  }
+
+  .img-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 11;
+  }
+
+  .img-item-5 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 11;
+  }
+
+  .img-item-6 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 11;
+    grid-row-end: 16;
+  }
+
+  .img-item-7 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 11;
+    grid-row-end: 21;
+  }
+
+  .img-item-8 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 16;
+  }
+
+  .img-item-9 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 16;
+    grid-row-end: 21;
+  }
+
+  .img-item-10 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 16;
+    grid-row-end: 21;
+  }
+
+  .img-item-11 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 21;
+    grid-row-end: 31;
+  }
+
+  .img-item-12 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 21;
+    grid-row-end: 31;
+  }
+
+  /* ---------- Nuværende projekter ---------- */
+  .p2-section-1 {
+    background-image: url(media/sectionbackground1.png);
+  }
+
+  /* ================================================================================= DESKTOP OM OS ================================================================================= */
+
+  .p3-sec2-row-1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .p3-sec2-row-2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .p3-sec2-fb {
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+    width: 50vw;
+  }
+
+  .p3-sec2-img {
+    width: 15vw;
+    border-radius: 5px;
+  }
+
+  .p3-om {
+    padding: 2vw;
+  }
+
+  .p3-section-3 {
+    background-image: url(media/sectionbackground1.png);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .p3-knapper {
+    flex-direction: row;
+    padding-top: 10vh;
+  }
+
+  .p3-knap {
+    padding: 2vw;
+    width: 40vw;
+  }
+
+  /* ================================================================================= DESKTOP PARTNERE =================================================================================*/
+
+  /* -------- NYE PARTNERE ---------- */
+
+  .p4-section-1-div {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4vh;
+  }
+
+  /* -------- NUVÆRENDE PARTNERE ---------- */
+
+  .p4-section-3 {
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+    height: 100vh;
+  }
+
+  .logo-container {
+    margin-top: none;
+    padding: none;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 3vw);
+    grid-gap: 4px;
+    grid-column-gap: 4px;
+  }
+
+  .p4-partnerlogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logo-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .logo-item-2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .logo-item-3 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .logo-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }
+
+  .logo-item-5 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }
+
+  .logo-item-6 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }
+  /* --------- KALENDER ---------- */
+
+  .p4-section-2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 5vh;
+  }
+
+  .p4-section-2 p {
+    font-weight: 600;
+    text-align: left;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+
+  .kalendericon {
+    width: 80px;
+  }
+
+  /* ================================================================================= DESKTOP STØT OS ================================================================================= */
+
+  .form-container {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+}

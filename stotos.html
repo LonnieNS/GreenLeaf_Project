@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Støt Os</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="centerwebsite">
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <img src="media/greenleaflogo.svg" alt="" class="brand" />
+      <button class="burger-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+
+      <ul class="nav-ul">
+        <li class="nav-item"><a href="index.html" class="nav-link">hjem</a></li>
+        <li class="nav-item">
+          <a href="projekter.html" class="nav-link">projekter</a>
+        </li>
+        <li class="nav-item"><a href="om.html" class="nav-link">om os</a></li>
+        <li class="nav-item">
+          <a href="partnere.html" class="nav-link">partnere</a>
+        </li>
+        <li class="nav-item stotos">
+          <<a href="stotos.html" class="stot-link">støt os</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- PARALLAX HEADER -->
+    <header class="p1-header">
+      <div id="parallax-container">
+        <div class="para1"></div>
+        <div class="para2"></div>
+        <div class="para3"></div>
+        <div class="para4"></div>
+        <div class="para5">
+          <h1 class="headerh1 stotosheader">
+            Bliv medlem og støt naturen i din by
+          </h1>
+        </div>
+        <div class="para6"></div>
+        <div class="para7"></div>
+        <div class="para8"></div>
+      </div>
+    </header>
+
+    <section class="stotmain width-control">
+      <h2>Tilmeld dig her</h2>
+      <p>
+        For 150kr om måneden er du med til at starte parker i alle landets
+        storbyer
+      </p>
+      <div>
+        <form action="payup.html">
+          <input
+            type="text"
+            name="firstname"
+            id="firstame"
+            placeholder="Fornavn"
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Efternavn"
+          />
+          <input
+            type="text"
+            name="address1"
+            id="address1"
+            placeholder="Adresse"
+          />
+          <input
+            type="text"
+            name="address2"
+            id="address2"
+            placeholder="Postnummer"
+          />
+          <input type="text" name="address3" id="address3" placeholder="By" />
+          <input type="text" name="phone" id="phone" placeholder="Telefon" />
+          <input type="email" name="Email" id="email" placeholder="Email" />
+          <input type="submit" value="Til betaling" />
+        </form>
+      </div>
+    </section>
+
+    <!-- NYHEDSBREV -->
+    <section class="nyhedsbrev">
+      <h3>Hold dig opdateret - Få vores nyhedsbrev</h3>
+      <form action="#">
+        <input type="email" name="Email" id="email-txt" placeholder="Email" />
+        <input type="submit" value="send" />
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footersec-1">
+        <h3>Bring naturen til byen</h3>
+        <p>
+          Projektet er et samarbejde mellem Greenpeace, Save the trees og
+          Greenleaf. <br />
+          Vores mål er simpelt; at bringe naturen tilbage til byerne og skabe
+          livsglæde et træ ad gangen. <br />
+        </p>
+      </div>
+      <div class="footersec-2">
+        <h3>Kontakt</h3>
+        <form action="#">
+          <input type="text" name="Name" id="name-txt" placeholder="Navn" />
+          <input type="email" name="Email" id="email-txt" placeholder="Email" />
+          <textarea
+            name="message"
+            id="message-txt"
+            cols="30"
+            rows="10"
+            placeholder="Besked"
+          >
+          </textarea>
+          <input type="submit" value="send" />
+        </form>
+      </div>
+      <div class="footersec-3">
+        <h3>Find Os</h3>
+        <p>
+          GreenLeaf <br />
+          Skaldehøjvej 2 <br />
+          8800 Viborg <br />
+          +45 86675055 <br />
+          info@greenleaf.dk
+        </p>
+      </div>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
